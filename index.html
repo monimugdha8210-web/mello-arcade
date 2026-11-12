@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MugdhoMello Arcade | Official Portal</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #131b2e;
+            --accent-glow: #00ffcc;
+            --accent-purple: #9d4edd;
+            --text-main: #f8f9fa;
+            --text-muted: #94a3b8;
+            --border-color: rgba(0, 255, 204, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .tagline {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent-glow);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 30%, var(--accent-glow) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.75rem;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Grid Layout for Games */
+        .arcade-grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .game-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .game-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-glow), var(--accent-purple));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-glow);
+            box-shadow: 0 10px 30px -10px rgba(0, 255, 204, 0.15);
+        }
+
+        .game-card:hover::before {
+            opacity: 1;
+        }
+
+        .game-info h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .game-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: transparent;
+            color: var(--accent-glow);
+            border: 1px solid var(--accent-glow);
+            padding: 0.6rem 1.25rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .btn:hover {
+            background: var(--accent-glow);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+        }
+
+        /* Footer / Social Hub */
+        footer {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            width: 100%;
+            padding-top: 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-glow);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="tagline">MugdhoMello · Noyonpurian Gang</div>
+            <h1>Arcade Portal</h1>
+            <p class="subtitle">Interactive web experiences, stories, and atmospheric experiments.</p>
+        </header>
+
+        <!-- Game Cards Section (Add your links here) -->
+        <div class="arcade-grid">
+            
+            <!-- Game 1: Nishi Express -->
+            <div class="game-card">
+                <div class="game-info">
+                    <h2>Nishi Express</h2>
+                    <p>A nocturnal train mystery. The night is deep, tasks are running, and a thief is hidden among the passengers.</p>
+                </div>
+                <!-- REPLACE href with your actual live GitHub Pages link -->
+                <a href="https://monimugdha8210-web.github.io/Nishi-Express-Nayanpur/" class="btn" target="_blank">Play Nishi Express</a>
+            </div>
+
+            <!-- Game 2: BrainBrawl -->
+            <div class="game-card">
+                <div class="game-info">
+                    <h2>BrainBrawl</h2>
+                    <p>An intense, fast-paced challenge arena designed to test your reflexes and wits.</p>
+                </div>
+                <!-- REPLACE href with your actual live GitHub Pages link -->
+                <a href="https://monimugdha8210-web.github.io/BrainBrawl-Nayanpur/" class="btn" target="_blank">Launch BrainBrawl</a>
+            </div>
+
+            <!-- Future Game Placeholder (Ready to duplicate) -->
+            <div class="game-card" style="border-style: dashed; opacity: 0.6;">
+                <div class="game-info">
+                    <h2>Next Project</h2>
+                    <p>Coming soon. Slot reserved for the next game release.</p>
+                </div>
+                <span class="btn" style="border-color: var(--text-muted); color: var(--text-muted); cursor: not-allowed;">In Development</span>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="social-links">
+                <a href="https://github.com/monimugdha8210-web" target="_blank">GitHub Profile</a>
+                <!-- Add Discord, YouTube, or other links here if needed -->
+            </div>
+            <p>&copy; 2026 Al Shahadatul Hoque Mugdho. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
